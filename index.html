@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>賺到第一份人工，點解要諗通脹？</title>
+<style>
+  :root{
+    --bg:#0f1020; --card:#1c1e33; --card2:#232544;
+    --pink:#ff5c8a; --orange:#ffb347; --cyan:#4fd1c5; --purple:#a78bfa;
+    --ink:#f2f3fa; --muted:#9aa0b8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"PingFang HK","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);overflow:hidden}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 8vw;background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(255,92,138,.12), transparent),
+    radial-gradient(1000px 500px at -10% 110%, rgba(79,209,197,.10), transparent), var(--bg);}
+  .slide.active{display:flex;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .kicker{font-size:.85rem;letter-spacing:.25em;color:var(--cyan);text-transform:uppercase;margin-bottom:1rem}
+  h1{font-size:clamp(2rem,5.5vw,4rem);line-height:1.2;font-weight:800}
+  h2{font-size:clamp(1.5rem,3.6vw,2.6rem);line-height:1.25;font-weight:800;margin-bottom:1.2rem}
+  .accent{background:linear-gradient(90deg,var(--pink),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.7;max-width:60ch}
+  .cards{display:flex;gap:1.2rem;margin-top:2rem;flex-wrap:wrap}
+  .card{flex:1;min-width:220px;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1.4rem 1.5rem}
+  .card h3{font-size:1.15rem;margin-bottom:.5rem}
+  .card p{color:var(--muted);font-size:.95rem;line-height:1.65}
+  .big{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;margin:.2rem 0 .6rem}
+  .tag{display:inline-block;font-size:.75rem;padding:.25rem .7rem;border-radius:99px;margin-bottom:.7rem;font-weight:700}
+  .t-pink{background:rgba(255,92,138,.18);color:var(--pink)}
+  .t-cyan{background:rgba(79,209,197,.18);color:var(--cyan)}
+  .t-orange{background:rgba(255,179,71,.18);color:var(--orange)}
+  .t-purple{background:rgba(167,139,250,.18);color:var(--purple)}
+  table{width:100%;border-collapse:collapse;margin-top:1.5rem;font-size:clamp(.85rem,1.4vw,1.05rem)}
+  th{color:var(--cyan);text-align:left;padding:.6rem .8rem;border-bottom:1px solid rgba(255,255,255,.15);font-weight:700}
+  td{padding:.6rem .8rem;border-bottom:1px solid rgba(255,255,255,.06);color:var(--muted);line-height:1.5}
+  td b{color:var(--ink)}
+  .note{margin-top:2rem;color:var(--muted);font-size:.8rem;line-height:1.6;border-top:1px solid rgba(255,255,255,.1);padding-top:1rem;max-width:75ch}
+  .pageno{position:fixed;right:2rem;bottom:1.4rem;color:var(--muted);font-size:.85rem;z-index:10}
+  .nav{position:fixed;left:2rem;bottom:1.2rem;z-index:10;display:flex;gap:.6rem}
+  .nav button{background:var(--card);border:1px solid rgba(255,255,255,.15);color:var(--ink);border-radius:10px;padding:.4rem .9rem;cursor:pointer;font-size:1rem}
+  .nav button:hover{border-color:var(--pink)}
+  .bar{width:64px;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--pink),var(--orange));margin-bottom:1.4rem}
+  ul.pts{list-style:none;margin-top:1rem}
+  ul.pts li{padding:.55rem 0 .55rem 1.8rem;position:relative;color:var(--muted);font-size:clamp(.95rem,1.5vw,1.15rem);line-height:1.6}
+  ul.pts li::before{content:"▸";position:absolute;left:0;color:var(--pink);font-weight:700}
+  ul.pts li b{color:var(--ink)}
+  .pyr{display:flex;flex-direction:column;align-items:center;gap:.7rem;margin-top:2rem}
+  .pyr div{border-radius:12px;padding:.9rem 1.4rem;text-align:center;font-weight:700}
+  .pyr small{display:block;font-weight:400;opacity:.85;margin-top:.2rem}
+  .vs{display:flex;gap:1.5rem;align-items:stretch;margin-top:2rem}
+  .vs .card{text-align:center}
+  .vs .mid{display:flex;align-items:center;font-size:2rem;color:var(--pink);font-weight:800}
+</style>
+</head>
+<body>
+
+<!-- 1 標題 -->
+<section class="slide active">
+  <div class="bar"></div>
+  <div class="kicker">內部分享 · 純教育角度</div>
+  <h1>賺到第一份人工，<br><span class="accent">點解要諗通脹？</span></h1>
+  <p class="sub" style="margin-top:1.5rem">今日嘅快樂 vs 未來嘅責任——同一份人工，點樣分配先唔會俾通脹食咗？</p>
+</section>
+
+<!-- 2 Hook -->
+<section class="slide">
+  <div class="kicker">Hook</div>
+  <h2>你買嘅嘢年年升價，<br>父母嘅醫療單 <span class="accent">升得更快</span></h2>
+  <div class="vs">
+    <div class="card">
+      <div class="tag t-cyan">今日嘅快樂</div>
+      <div class="big">☕</div>
+      <h3>一杯咖啡</h3>
+      <p>而家 HK$40 一杯，10 年後可能 HK$50——你可以唔飲。</p>
+    </div>
+    <div class="mid">vs</div>
+    <div class="card">
+      <div class="tag t-pink">未來嘅責任</div>
+      <div class="big">🏥</div>
+      <h3>父母一日住院費</h3>
+      <p>私家醫院一日幾千蚊，10 年後更貴——但佢哋嗰日係咪可以「唔醫」？</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:2rem">通脹令「未來嘅責任」愈嚟愈貴。<b style="color:var(--ink)">愈遲準備，愈貴。</b></p>
+</section>
+
+<!-- 3 通脹數字 -->
+<section class="slide">
+  <div class="kicker">通脹數字</div>
+  <h2>一般通脹 vs <span class="accent">醫療通脹</span></h2>
+  <div class="cards">
+    <div class="card">
+      <div class="tag t-cyan">整體 CPI</div>
+      <div class="big">約 2%</div>
+      <p>香港整體通脹長期約 2% 左右——溫和，但年年都喺度。</p>
+    </div>
+    <div class="card">
+      <div class="tag t-pink">醫療開支通脹</div>
+      <div class="big">更高 ↑</div>
+      <p>醫療開支通脹長期高於 CPI；私家病房、危疾治療費以雙位數年增長計。</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:2rem">一個家庭嘅醫療開支，跑得比你人工快。</p>
+</section>
+
+<!-- 4 年輕投保三大優勢 -->
+<section class="slide">
+  <div class="kicker">點解係而家？</div>
+  <h2>年輕投保 <span class="accent">三大優勢</span></h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-cyan">優勢 1</div><h3>保費平 💰</h3><p>愈後生，保費愈低——同一份保障，20 歲買同 40 歲買差好遠。</p></div>
+    <div class="card"><div class="tag t-orange">優勢 2</div><h3>核保易 ✅</h3><p>而家健康，投保容易通過；10 年後身體變化，可能核保失敗或受限制。</p></div>
+    <div class="card"><div class="tag t-pink">優勢 3</div><h3>保費鎖定 🔒</h3><p>有啲保險保費保證不變——通脹年年加價，你份保費鎖死喺今日。</p></div>
+  </div>
+</section>
+
+<!-- 5 保障金字塔 -->
+<section class="slide">
+  <div class="kicker">三層保障結構</div>
+  <h2>保障金字塔：由最平嗰層開始</h2>
+  <div class="pyr">
+    <div style="width:38%;background:rgba(167,139,250,.2);border:1px solid var(--purple)">危疾 — 收入替代<small>病咗唔做到嘢，頂住收入</small></div>
+    <div style="width:56%;background:rgba(79,209,197,.2);border:1px solid var(--cyan)">醫療 VHIS — 住院保障<small>有扣稅，政府幫你俾一部分</small></div>
+    <div style="width:74%;background:rgba(255,179,71,.2);border:1px solid var(--orange)">意外 — 入場費最平<small>每月百幾蚊，第一份保單最易入手</small></div>
+  </div>
+</section>
+
+<!-- 6 VHIS -->
+<section class="slide">
+  <div class="kicker">第 2 層 · 醫療</div>
+  <h2>宏利晉悅自願醫保靈活計劃 <span style="font-size:.6em;color:var(--muted)">(VHIS)</span></h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-cyan">保障額</div><div class="big accent">$30,000,000</div><p>每保單年度全數賠償（不設分項限額之主要項目）高達 $3,000 萬。</p></div>
+    <div class="card"><div class="tag t-orange">扣稅</div><div class="big">$8,000/年</div><p>香港納稅人：保費稅務扣減上限，每名受保人 HK$8,000/年。<b style="color:var(--ink)">扣稅 = 政府幫你俾一部分。</b></p></div>
+    <div class="card"><div class="tag t-pink">揀法</div><h3>自付費揀高啲</h3><p>3 個計劃級別 + 最多 5 個每年自付費選項——年輕人揀高自付費 → 平保費。另有健康生活保費折扣。</p></div>
+  </div>
+  <p class="note">已知投保前病症：30 日後開始保障，保障限額重置。以保單條款為準；保費以公司報價為準。</p>
+</section>
+
+<!-- 7 危疾 -->
+<section class="slide">
+  <div class="kicker">第 3 層 · 危疾</div>
+  <h2>活耀人生危疾保2（加強版）</h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-purple">保障範圍</div><div class="big">112 種</div><p>危疾及疾病，保障至 100 歲（60 嚴重 + 44 早期 + 8 兒童；ICU 保障至 85 歲）。首 10 個保單年度嚴重危疾索償：額外 <b style="color:var(--ink)">+50% 名義金額</b>。</p></div>
+    <div class="card"><div class="tag t-cyan">多重賠償</div><h3>癌症／心臟病／中風</h3><p>多重賠償；抗癌期間每年財務支援。香港主要死因 = 癌症+心臟病+中風；癌症 5 年存活率 69%——醫療費係長期抗戰。</p></div>
+    <div class="card"><div class="tag t-pink">駁通脹 🔒</div><h3>保費保證不變</h3><p>通脹年年加，呢份保費鎖死。<b style="color:var(--ink)">後生買 = 保費最平 + 鎖死不變。</b>危疾 = 收入替代——你係屋企收入來源之一。</p></div>
+  </div>
+  <p class="note">以保單條款為準；保費以公司報價為準。</p>
+</section>
+
+<!-- 8 意外 -->
+<section class="slide">
+  <div class="kicker">第 1 層 · 意外</div>
+  <h2>「萬無一失」個人意外保障計劃2</h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-orange">入場費</div><div class="big accent">$135/月</div><p>例：30 歲投保 HK$250,000 名義金額，每月保費 HK$135。<b style="color:var(--ink)">每月百幾蚊，第一份保單最易入手。</b></p></div>
+    <div class="card"><div class="tag t-cyan">投保門檻</div><h3>唔使健康核保</h3><p>投保年齡 16–65 歲，續保至 75 歲；簡易投保程序。計劃級別名義金額 HK$250,000–2,250,000。</p></div>
+    <div class="card"><div class="tag t-purple">加分位</div><h3>續保保障遞增</h3><p>醫療費用每次意外賠償高達名義金額 6%；續保每年 +5% 保障額（最高 +25%）；全部傷殘期間豁免保費。</p></div>
+  </div>
+  <p class="note">以保單條款為準；保費以公司報價為準。</p>
+</section>
+
+<!-- 9 總結 -->
+<section class="slide">
+  <div class="kicker">總結</div>
+  <h2>第一步唔係買晒，<br>係由 <span class="accent">最平嗰層</span> 開始</h2>
+  <ul class="pts">
+    <li><b>意外</b>：月供百幾蚊，先用最低成本入場</li>
+    <li><b>醫療 VHIS</b>：有扣稅補貼，保障大額住院開支</li>
+    <li><b>危疾</b>：收入替代，年輕投保鎖定保費</li>
+    <li>保險嘅本質：用「今日可負擔嘅保費」，鎖定「未來大幅貶值前嘅保障」</li>
+  </ul>
+</section>
+
+<!-- 10 免責 -->
+<section class="slide">
+  <div class="kicker">第一部分完 · 免責</div>
+  <h2>免責聲明</h2>
+  <p class="sub">本簡報內所有產品資料僅屬一般資訊，以保險公司之官方單張及保單條款為準。<br>詳情（包括保障範圍、除外事項、保費及限制）請參閱相關保單文件。<br><br>資料來源：宏利 A4 單張（VHIS 2026 年 1 月版 · 危疾 2026 年 7 月版 · 意外 2026 年 2 月版 · 傳承 2026 年 8 月版）。</p>
+</section>
+
+<!-- 11 工具箱總覽 -->
+<section class="slide">
+  <div class="kicker">第二部分 · 對抗通脹工具箱</div>
+  <h2>除咗保險，仲有咩可以對抗通脹？</h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-cyan">現金類</div><h3>活期 / 定存</h3><p>保本、彈性高，但回報低——唔保購買力。</p></div>
+    <div class="card"><div class="tag t-orange">市場類</div><h3>股票 / ETF</h3><p>潛在回報高，但波動大、要捱得住、唔保證。</p></div>
+    <div class="card"><div class="tag t-pink">保障類</div><h3>保險</h3><p>回報有限，但鎖定兩樣嘢：保費 + 核保資格。</p></div>
+  </div>
+  <p class="sub" style="margin-top:2rem"><b style="color:var(--ink)">唔係邊樣最好，係每樣功能唔同。</b> 理財係組合，唔係單選題。</p>
+</section>
+
+<!-- 12 定存 -->
+<section class="slide">
+  <div class="kicker">現金類</div>
+  <h2>定期存款：保本，但 <span class="accent">唔保購買力</span></h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-cyan">現實數字</div><h3>起存 10 萬 約 3 厘</h3><p>香港定存：起存額 10 萬先有約 3 厘（用戶提供 2026-10-13 牌價）；虛擬銀行可做到更低成本。每 3–6 個月到期要重定價。</p></div>
+    <div class="card"><div class="tag t-pink">數學題</div><h3>3 厘 vs 醫療通脹</h3><p>定存率貼近 CPI 就好叻，但醫療通脹更高——醫療購買力可能打和甚至倒退。</p></div>
+    <div class="card"><div class="tag t-orange">定位</div><h3>應急錢嘅屋企 🏠</h3><p>勝在彈性最高、無鎖死。係應急錢嘅位置，唔係進攻工具。</p></div>
+  </div>
+  <p class="note">具體利率以各銀行當時牌價為準。</p>
+</section>
+
+<!-- 13 港股教訓 -->
+<section class="slide">
+  <div class="kicker">市場類 · 港股嘅教訓</div>
+  <h2>「買股票 = 一定跑贏通脹」<span class="accent">係迷思</span></h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-cyan">盈富基金 2800.HK</div><div class="big" style="color:var(--orange)">+1.0%</div><p>10 年年化回報（2015–2026，調整後）</p></div>
+    <div class="card"><div class="tag t-cyan">恒生指數</div><div class="big" style="color:var(--orange)">+0.9%</div><p>同期年化——整整 10 年跑輸通脹</p></div>
+  </div>
+  <p class="sub" style="margin-top:2rem">訊息：<b style="color:var(--ink)">市場選擇同時間點好重要。</b> 指數十年橫行，係真實會發生嘅事。</p>
+  <p class="note">數據來源：Yahoo Finance（2026-10-13 抓取，月度收盤真實計算）。過往表現不代表將來。</p>
+</section>
+
+<!-- 14 美股對比 -->
+<section class="slide">
+  <div class="kicker">市場類 · 同場對比</div>
+  <h2>S&P 500：同期 <span class="accent">+12.8%</span> 年化</h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-cyan">真實數字</div><div class="big" style="color:var(--cyan)">+12.8%</div><p>S&P 500 指數 / VOO ETF，同樣 10 年（2015–2026）年化回報。</p></div>
+    <div class="card"><div class="tag t-orange">但係</div><h3>波動大 · 唔係保證</h3><p>長期正回報存在，但要捱得住震盪。港股 +1% 同美股 +12.8% 同時存在——「買股票」三個字唔係答案。</p></div>
+    <div class="card"><div class="tag t-pink">年輕人優勢</div><h3>時間 + 月供</h3><p>有時間捱波動，可以用小額月供，紀律化入市。</p></div>
+  </div>
+  <p class="note">數據來源：Yahoo Finance（2026-10-13）。過往表現不代表將來。</p>
+</section>
+
+<!-- 15 工具梯度表 -->
+<section class="slide">
+  <div class="kicker">全表一睇</div>
+  <h2>工具梯度表：由最蠢到最聰明</h2>
+  <table>
+    <tr><th>梯級</th><th>工具</th><th>性質</th><th>一句講評</th></tr>
+    <tr><td><b>0</b></td><td>銀行活期</td><td>利率近 0%</td><td><b>最蠢：保證每年輸購買力</b>。只放 3–6 個月應急錢</td></tr>
+    <tr><td><b>0.5</b></td><td>銀行定存</td><td>約 2.5%–4%（需核實）</td><td>保本但唔保購買力；至少跑得貼近 CPI，勝在彈性</td></tr>
+    <tr><td><b>1</b></td><td>iBond</td><td>息 = 5 年平均 CPI，下限 2%</td><td>字面意義上為對抗通脹而設；缺點：要抽籤、限額細</td></tr>
+    <tr><td><b>1.5</b></td><td>銀債</td><td>max(固定息, CPI)，保證唔低過固定息</td><td>歷史保證息 3%–4% 級；<b>60 歲或以上優先</b></td></tr>
+    <tr><td><b>2</b></td><td>MPF 自願性供款</td><td>扣稅上限 $60,000/年</td><td>扣稅 = 即時回報；缺點：鎖到 65 歲</td></tr>
+    <tr><td><b>3</b></td><td>月供 ETF</td><td>盈富 +1.0% vs S&amp;P 500 +12.8%</td><td>潛回報最高但波動大；要揀市場 + 捱得住</td></tr>
+    <tr><td><b>4</b></td><td>保險</td><td>回報唔係強項</td><td>鎖定<b>年輕保費 + 健康核保資格</b></td></tr>
+  </table>
+  <p class="note">利率及條款以官方當時資料為準；過往表現不代表將來。</p>
+</section>
+
+<!-- 16 iBond -->
+<section class="slide">
+  <div class="kicker">梯級 1</div>
+  <h2>iBond：<span class="accent">字面意義上</span> 為對抗通脹而設</h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-cyan">機制</div><h3>息率 = 5 年平均 CPI</h3><p>政府發行，6 年期，息率跟住通脹走——CPI 高佢就高。<b style="color:var(--ink)">下限 2%</b>，最低投資 HK$10,000，半年派息。</p></div>
+    <div class="card"><div class="tag t-orange">歷史</div><h3>派息 3%–6% 級</h3><p>歷史批次派息 3%–6% 級，跑贏一般通脹冇難度。</p></div>
+    <div class="card"><div class="tag t-pink">缺點</div><h3>要抽籤 + 限額細</h3><p>每次發行要抽籤，每人限額唔多——係年輕人自己嘅抗通脹基本位，但唔夠做主力。</p></div>
+  </div>
+  <p class="note">條款以政府官方發行資料為準。</p>
+</section>
+
+<!-- 17 銀債真實 case -->
+<section class="slide">
+  <div class="kicker">梯級 1.5 · 真實 case</div>
+  <h2>「用阿媽名買銀債」——<br>好多人咁做，<span class="accent">講清楚風險位</span></h2>
+  <p class="sub">點解咁做？真合理：銀債 <b style="color:var(--ink)">60+ 優先配發</b>，父母名中籤率高好多；息率保證、政府發行。但——</p>
+  <ul class="pts">
+    <li><b>事實一</b>：錢 legally 屬於阿媽——派息同本金都係佢嘅。「記得俾返你」係屋企信任，唔係契約</li>
+    <li><b>事實二</b>：3 年鎖定期內，阿媽嘅任何變化（財務需要、家庭狀況）都會影響嗰筆錢</li>
+    <li><b>事實三</b>：半年派息入阿媽戶口，再「過數」俾你——多一層信任依賴，冇任何文件保障</li>
+    <li><b>建議</b>：開口講明白 = 風險管理，寫低共識（WhatsApp 一句都算）；只撥「俾得起阿媽」嘅錢，心態當送禮物本金；自己核心抗通脹位仲係 iBond／定存／月供 ETF</li>
+    <li><b>加分位</b>：銀債保息，但唔保父母醫療費——「幫父母買保險 vs 幫父母買銀債」，係同一個孝順預算嘅分配問題</li>
+  </ul>
+</section>
+
+<!-- 18 行動三步 + 免責 -->
+<section class="slide">
+  <div class="kicker">行動建議 + 免責</div>
+  <h2>三步起步，<span class="accent">唔使瞓身</span></h2>
+  <div class="cards">
+    <div class="card"><div class="tag t-cyan">①</div><h3>應急錢先</h3><p>3–6 個月開支，入活期/定存。呢啲錢唔係攞嚟對抗通脹，係攞嚟瞓得著。</p></div>
+    <div class="card"><div class="tag t-orange">②</div><h3>最平保障入場</h3><p>意外保障 HK$135/月，唔使健康核保——用最低成本鎖定第一層。</p></div>
+    <div class="card"><div class="tag t-pink">③</div><h3>有餘裕先加碼</h3><p>月供 ETF / VHIS / 危疾，按預算逐層加。理財係組合，唔係單選題。</p></div>
+  </div>
+  <p class="note">免責：過往表現不代表將來；本簡報屬一般資料，唔構成任何投保或投資建議；以保單條款及官方數據為準。</p>
+</section>
+
+<div class="nav">
+  <button onclick="go(-1)">←</button>
+  <button onclick="go(1)">→</button>
+</div>
+<div class="pageno" id="pg">1 / 18</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];let i=0;
+  function show(){slides.forEach((s,n)=>s.classList.toggle('active',n===i));document.getElementById('pg').textContent=(i+1)+' / '+slides.length}
+  function go(d){i=Math.min(slides.length-1,Math.max(0,i+d));show()}
+  document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))go(1);if(['ArrowLeft','PageUp'].includes(e.key))go(-1)});
+  document.addEventListener('click',e=>{if(!e.target.closest('.nav'))go(1)});
+  show();
+</script>
+</body>
+</html>
