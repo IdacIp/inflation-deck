@@ -12,7 +12,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:"PingFang HK","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);overflow:hidden}
-  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 8vw;background:
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;justify-content:safe center;overflow-y:auto;scrollbar-width:thin;padding:6vh 8vw;background:
     radial-gradient(1200px 600px at 85% -10%, rgba(255,92,138,.12), transparent),
     radial-gradient(1000px 500px at -10% 110%, rgba(79,209,197,.10), transparent), var(--bg);}
   .slide.active{display:flex;animation:fade .4s ease}
